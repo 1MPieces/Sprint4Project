@@ -6,10 +6,7 @@
 
 # Loading all the libraries
 import pandas as pd
-from matplotlib import pyplot as plt
 import numpy as np
-from datetime import date, datetime
-from dateutil.relativedelta import relativedelta
 import statistics as st
 from scipy import stats as ss
 import calendar
