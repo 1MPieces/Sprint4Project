@@ -6,7 +6,6 @@
 
 # Loading all the libraries
 import pandas as pd
-import numpy as np
 from scipy import stats as ss
 
 
@@ -81,7 +80,7 @@ calls_df['call_date'] = pd.to_datetime(calls_df['call_date'])
 
 
 #Adding a rounded-up call duration:
-calls_df['min_spent'] = np.ceil(calls_df['duration'])
+calls_df['min_spent'] = (calls_df['duration'])
 calls_df['min_spent'] = calls_df['min_spent'].astype('int')
 
 #Adding a month of call column:
@@ -157,7 +156,7 @@ web_data = internet.pivot_table(values='gb_used', index = ['user_id', 'month'], 
 web_data.columns = ['ttl_sesn', 'sum_gbused']
 
 # Create new column for chargeable GB, Round monthly GB total up to next integer:
-web_data['sum_gbspent'] = np.ceil(web_data['sum_gbused'])
+web_data['sum_gbspent'] = (web_data['sum_gbused'])
 web_data['sum_gbspent'] = web_data['sum_gbspent'].astype('int')
 web_data = web_data.reset_index()
 
