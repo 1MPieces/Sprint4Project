@@ -7,9 +7,7 @@
 # Loading all the libraries
 import pandas as pd
 import numpy as np
-import statistics as st
 from scipy import stats as ss
-import calendar
 
 
 # Load the data files into different DataFrames
